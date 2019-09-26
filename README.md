@@ -19,6 +19,21 @@ dotnet build
 
 1. Add reference to the project from Blazor/Razor Pages project
 1. Copy the `plotlyInterop.js` and `plotly.min.js` files to the `wwwroot` of the web application that references this project.
+1. Add the following lines at the end of your `body` tag in the `wwwroot/index.html` file.
+
+```html
+<script src="plotly.min.js"></script>
+<script src="plotlyInterop.js"></script>
+```
+
+1. Add the following imports to the `_Imports.razor` file in the project directory.
+
+```cshtml
+@using Blazly
+@using Blazly.Base
+@using Blazly.Components
+```
+
 1. Add the following code to the Blazor/Razor page where the plot component will be used:
 
 ```cshtml
